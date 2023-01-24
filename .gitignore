@@ -32,3 +32,6 @@
 
 # Ignore .env file containing credentials.
 .env
+
+# linters
+node_modules/
