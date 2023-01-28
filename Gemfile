@@ -54,7 +54,6 @@ group :development, :test do
 
   # if you're using Rails 6 you need:
   gem 'rspec-rails', '~> 4.0.0.beta2'
-
 end
 
 group :development do
