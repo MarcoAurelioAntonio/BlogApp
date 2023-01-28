@@ -51,6 +51,9 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+
+  # if you're using Rails 6 you need:
+  gem 'rspec-rails', '~> 4.0.0.beta2'
 end
 
 group :development do
