@@ -54,6 +54,9 @@ group :development, :test do
 
   # if you're using Rails 6 you need:
   gem 'rspec-rails', '~> 4.0.0.beta2'
+
+  # See https://hackernoon.com/how-to-write-your-first-tests-using-rspec-in-rails-applications-hhfk2bqs
+  gem 'rails-controller-testing'
 end
 
 group :development do
