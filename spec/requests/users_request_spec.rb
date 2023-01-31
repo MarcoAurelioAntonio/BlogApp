@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
   describe 'GET /index' do
-    subject { get '/users'}
+    subject { get '/users' }
     before { subject }
 
     it 'returns http success' do
@@ -19,7 +19,7 @@ RSpec.describe 'Users', type: :request do
   end
 
   describe 'GET /show' do
-    subject { get '/users/:id'}
+    subject { get '/users/:id' }
     before { subject }
 
     it 'returns http success' do
