@@ -7,10 +7,10 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 # Users
-first_user = User.create(name: 'Gustavo', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Master of the universe.')
-second_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
-third_user = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.')
-fourth_user = User.create(name: 'Ariel', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Argentina.')
+first_user = User.create(name: 'Gustavo', photo: 'https://img2.freepng.es/20180402/ogw/kisspng-computer-icons-user-profile-clip-art-user-avatar-5ac208105c03d6.9558906215226654883769.jpg', bio: 'Master of the universe.')
+second_user = User.create(name: 'Tom', photo: 'https://img2.freepng.es/20180402/ogw/kisspng-computer-icons-user-profile-clip-art-user-avatar-5ac208105c03d6.9558906215226654883769.jpg', bio: 'Teacher from Mexico.')
+third_user = User.create(name: 'Lilly', photo: 'https://img2.freepng.es/20180402/ogw/kisspng-computer-icons-user-profile-clip-art-user-avatar-5ac208105c03d6.9558906215226654883769.jpg', bio: 'Teacher from Poland.')
+fourth_user = User.create(name: 'Ariel', photo: 'https://img2.freepng.es/20180402/ogw/kisspng-computer-icons-user-profile-clip-art-user-avatar-5ac208105c03d6.9558906215226654883769.jpg', bio: 'Teacher from Argentina.')
 
 # Posts
 first_post = Post.create(author: first_user, title: 'What is Lorem Ipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum')

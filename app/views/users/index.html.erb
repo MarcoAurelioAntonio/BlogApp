@@ -1,17 +1,15 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
-
-<p>This a List of the Users</p>
-<br>
-<% @users.each do |item| %>
-   <p><%= item.name %></p>
-   <p><%= item.bio %></p>
-   <br>
-<% end %>
-<% @posts.each do |item| %>
-   <p><%= item.title %></p>
-   <p><%= item.text %></p>
-   <br>
-<% end %>
-
-<p><%= @users %></p>
+<section>
+  <% @users.each do |user| %>
+    <%= link_to user_path(user) do %>
+      <li class="user-container">
+        <div class="user-image">
+        	<%= image_tag user.photo, alt: "#{user.name}-avatar" %>
+        </div>
+        <div class="user-info">
+          <h3 class="username"><%= user.name %></h3>
+          <span class="post-numb">Number of posts: <%= user.posts_counter %></span>
+        </div>
+      </li>
+    <% end %>
+  <% end %>
+</section>
