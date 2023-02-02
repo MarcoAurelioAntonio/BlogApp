@@ -2,3 +2,16 @@
 <p>Find me in app/views/users/index.html.erb</p>
 
 <p>This a List of the Users</p>
+<br>
+<% @users.each do |item| %>
+   <p><%= item.name %></p>
+   <p><%= item.bio %></p>
+   <br>
+<% end %>
+<% @posts.each do |item| %>
+   <p><%= item.title %></p>
+   <p><%= item.text %></p>
+   <br>
+<% end %>
+
+<p><%= @users %></p>

@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
-  def index; end
+  def index
+    @users = User.all
+    @posts = Post.all
+  end
 
   def show
     params[:user_id]
