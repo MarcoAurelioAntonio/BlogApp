@@ -67,11 +67,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  row-gap: 10px;
   border: 1px solid #d3d3d3;
 }
 
+h3 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
 .post-title {
+  height: 30px;
   margin-left: 30px;
   font-size: 25px;
   font-weight: bold;
