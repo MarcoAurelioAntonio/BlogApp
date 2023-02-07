@@ -22,7 +22,7 @@
 
 				<div class="post-container" >
     			<h3 class="post-title"><%= post.title %></h3>
-  				<p class="post-text"><%= post.text %></p>
+  				<p class="post-text"><%= "#{post.text.slice(0, 150)}... [read more]" %></p>
   				<aside class="comment-like">
     				<span class="comments">Comments: <%= post.comments_counter %></span>
     				<span class="likes">
@@ -45,5 +45,5 @@
       See All Posts
     </button>
   <% end %>
-  
+
 </section>
