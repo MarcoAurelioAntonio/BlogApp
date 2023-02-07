@@ -13,12 +13,12 @@ class Post < ApplicationRecord
 
   validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0, allow_nil: true }
 
-  def update_posts_counter
-    counter = Post.count('author_id')
-    User.update(posts_counter: counter)
-  end
-
+  
   def recents_comments
     Comment.order('created_at Desc').limit(5)
+  end
+
+  def update_posts_counter
+    author.update(posts_counter: author.posts.count)
   end
 end
