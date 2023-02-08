@@ -20,7 +20,7 @@
         
 				<div class="post-container" >
     			<h3 class="post-title"><%= post.title %></h3>
-  				<p class="post-text"><%= "#{post.text.slice(0, 150)}... [read more]" %></p>
+  				<p class="post-text"><%= post.text.slice(0, 150) %><span class="read-more"><strong>...&nbsp;[read more]</strong></span></p>
   				<aside class="comment-like">
     				<span class="comments">Comments: <%= post.comments_counter %></span>
     				<span class="likes">
@@ -38,7 +38,7 @@
     <% end %>
   </div>
 
-  <%= link_to user_post_path(@user), class: 'link-btn' do %>
+  <%= link_to user_posts_path(@user), class: 'link-btn' do %>
     <button type="button" class="see-all-posts-btn">
       See All Posts
     </button>

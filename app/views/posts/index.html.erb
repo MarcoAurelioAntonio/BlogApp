@@ -33,7 +33,7 @@
 
 		<div class="post-comment">
 			<p><u><strong>Comments:</strong></u></p>
-			<% post.recents_comments.each do |comment| %>
+			<% post.recents_comments.reverse.each do |comment| %>
 				<p>
         	<span><strong><%= comment.author.name %>:</strong></span>
         	<span><em><%= comment.text %></em></span>
