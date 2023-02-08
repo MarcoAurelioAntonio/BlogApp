@@ -14,12 +14,10 @@
     <p class="bio-text"><%= @user.bio %></p>
   </div>
 
-
   <div class="posts-container">
-    <% @user.recents_post.each_with_index do |post, index| %>
-      <%= link_to user_post_path(@user, post), class: 'link-post' do %>
+    <% @user.recents_post.each do |post| %>
+      <%= link_to user_posts_path(@user), class: 'link-post' do %>
         
-
 				<div class="post-container" >
     			<h3 class="post-title"><%= post.title %></h3>
   				<p class="post-text"><%= "#{post.text.slice(0, 150)}... [read more]" %></p>

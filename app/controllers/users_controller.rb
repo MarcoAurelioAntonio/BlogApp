@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all.order(created_at: :desc)
-    # @last_three_posts = @user.recents_post
+    @users = User.all.order(created_at: :asc)
   end
 
   def show

@@ -1,0 +1,28 @@
+.link-post-post {
+  width: 70%;
+  list-style: none;
+  text-decoration: none;
+}
+
+.post-comment {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: -15px;
+  border: 1px solid #d3d3d3;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.post-comment p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 30px;
+  font-size: 15px;
+}
+
+.read-more {
+  color: #f50;
+  font-style: italic;
+}

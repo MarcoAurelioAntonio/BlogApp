@@ -1,4 +1,45 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<section class="section-index-users">
+	<li class="user-container-single">
+    <div class="user-image">
+      <%= image_tag @users.photo, alt: "#{@users.name}-avatar" %>
+    </div>
+    <div class="user-info">
+      <h3 class="username"><%= @users.name %></h3>
+      <span class="post-numb">Number of posts: <%= @users.posts_counter %></span>
+    </div>
+  </li>
 
-<p>All the posts of one User</p>
+	<% @posts.each do | post | %>
+  	<%= link_to user_post_path(:id => post.id), class: 'link-post-post' do %>
+
+			<div class="post-container" >
+    		<h3 class="post-title"><%= post.title %></h3>
+  			<p class="post-text"><%= post.text.slice(0, 150) %><span class="read-more"><strong>...&nbsp;[read more]</strong></span></p>
+  			<aside class="comment-like">
+    			<span class="comments">Comments: <%= post.comments_counter %></span>
+    			<span class="likes">
+      			Likes: 
+      			<%= post.likes_counter %>
+    			</span>
+    				
+					<button class="like-btn">
+    				<%= " ♥  "%>
+					</button>
+
+  			<aside>
+			</div>
+
+  	<% end %>
+
+		<div class="post-comment">
+			<p><u><strong>Comments:</strong></u></p>
+			<% post.recents_comments.each do |comment| %>
+				<p>
+        	<span><strong><%= comment.author.name %>:</strong></span>
+        	<span><em><%= comment.text %></em></span>
+				</p>
+    	<% end %>
+		</div>
+
+	<% end %>
+</section>
