@@ -1,0 +1,19 @@
+.post-show-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.post-show-div {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid #d3d3d3;
+}
+
+.post-show-div:hover {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  transition: 0.4s;
+}

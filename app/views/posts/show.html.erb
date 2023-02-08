@@ -1,31 +1,28 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
-
-<p>The Post and all the Comments about it</p>
-
-<div class="post-container" >
-  <h3 class="post-title"><%= @post.title %></h3>
-  <p class="post-text"><%= @post.text %></p>
-  <aside class="comment-like">
-    <span class="comments">Comments: <%= @post.comments_counter %></span>
-    <span class="likes">
-      Likes: 
-      <%= @post.likes_counter %>
-    </span>
+<section class="section-index-users post-show-container">
+  <div class="post-show-div" >
+    <h3 class="post-title"><%= @post.title %></h3>
+    <p class="post-text"><%= @post.text %></p>
+    <aside class="comment-like">
+      <span class="comments">Comments: <%= @post.comments_counter %></span>
+      <span class="likes">
+        Likes: 
+        <%= @post.likes_counter %>
+      </span>
             
-    <button class="like-btn">
-      <%= " ♥  "%>
-    </button>
+      <button class="like-btn">
+        <%= " ♥  "%>
+      </button>
 
-  <aside>
-</div>
+    <aside>
+  </div>
 
-<div class="post-comment">
-	<p><u><strong>Comments:</strong></u></p>
-	<% @post.recents_comments.reverse.each do |comment| %>
-		<p>
-      <span><strong><%= comment.author.name %>:</strong></span>
-      <span><em><%= comment.text %></em></span>
-		</p>
-  <% end %>
-</div>
+  <div class="post-comment">
+	  <p><u><strong>Comments:</strong></u></p>
+	  <% @post.recents_comments.reverse.each do |comment| %>
+		  <p>
+        <span><strong><%= comment.author.name %>:</strong></span>
+        <span><em><%= comment.text %></em></span>
+		  </p>
+    <% end %>
+  </div>
+</section>
