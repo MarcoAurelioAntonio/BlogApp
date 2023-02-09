@@ -5,7 +5,6 @@
     <aside class="comment-like">
       <span class="comments">Comments: <%= @post.comments_counter %></span>
       <span class="likes">
-        Likes: 
         <%= @post.likes_counter %>
       </span>
             
@@ -17,8 +16,8 @@
   </div>
 
   <div class="post-comment">
-	  <p><u><strong>Comments:</strong></u></p>
-	  <% @post.recents_comments.reverse.each do |comment| %>
+	  <span class="show-post-comment"><u><strong>Users comments:</strong></u></span>
+	  <% @post.comments.reverse.each do |comment| %>
 		  <p>
         <span><strong><%= comment.author.name %>:</strong></span>
         <span><em><%= comment.text %></em></span>

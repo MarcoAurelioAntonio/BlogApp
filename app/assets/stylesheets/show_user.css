@@ -115,6 +115,7 @@ h3 {
   background-color: transparent;
   cursor: pointer;
   margin-right: 25px;
+  margin-left: -20px;
 }
 
 .comments,

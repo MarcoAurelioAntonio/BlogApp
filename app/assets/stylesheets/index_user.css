@@ -57,14 +57,15 @@ section a {
 
 .username {
   margin-left: 30px;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: bold;
   color: black;
 }
 
 .post-numb {
   color: black;
-  font-size: 15px;
+  font-size: 18px;
+  font-style: italic;
   text-align: right;
-  margin-right: 20px;
+  margin-right: 50px;
 }

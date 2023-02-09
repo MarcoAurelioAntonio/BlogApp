@@ -7,10 +7,10 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 # Users
-first_user = User.create(name: 'Gustavo', photo: 'https://img2.freepng.es/20180402/ogw/kisspng-computer-icons-user-profile-clip-art-user-avatar-5ac208105c03d6.9558906215226654883769.jpg', bio: 'John Smith is a senior credit analyst at ABC Bank with over a decade of experience in risk analysis for banks and other lending institutions. He holds a Bachelor of Science degree in business administration from the State University of California. Smith is credited with creating a unit in ABC Bank to counteract cyber fraud in the credit department.')
-second_user = User.create(name: 'Tom', photo: 'https://img2.freepng.es/20180402/ogw/kisspng-computer-icons-user-profile-clip-art-user-avatar-5ac208105c03d6.9558906215226654883769.jpg', bio: 'He is the organizer of the Annual Credit Risk Trends conference in New York, which brings together professionals from across the United States to discuss credit risk analysis, using technology to manage risk, and how banks can better position themselves to deal with emerging credit risk issues.')
-third_user = User.create(name: 'Lilly', photo: 'https://img2.freepng.es/20180402/ogw/kisspng-computer-icons-user-profile-clip-art-user-avatar-5ac208105c03d6.9558906215226654883769.jpg', bio: 'At work, Smith developed an internal stress management guide to help employees manage stress and work pressure effectively. During the weekend, he likes to go hunting with his dog Bingo or preparing grilled delicacies in his backyard.')
-fourth_user = User.create(name: 'Ariel', photo: 'https://img2.freepng.es/20180402/ogw/kisspng-computer-icons-user-profile-clip-art-user-avatar-5ac208105c03d6.9558906215226654883769.jpg', bio: 'When writing a professional bio, it is not mandatory to include personal details, such as hobbies, personal history, favorite TV shows, and unique interests. However, including personal details can help paint you as a well-rounded person and will more likely allow your audience to establish a more personal connection with you.')
+first_user = User.create(name: 'Gustavo', photo: 'https://img.freepik.com/premium-photo/fun-3d-cartoon-yellow-character_183364-17615.jpg', bio: 'John Smith is a senior credit analyst at ABC Bank with over a decade of experience in risk analysis for banks and other lending institutions. He holds a Bachelor of Science degree in business administration from the State University of California. Smith is credited with creating a unit in ABC Bank to counteract cyber fraud in the credit department.')
+second_user = User.create(name: 'Tom', photo: 'https://img.freepik.com/free-photo/3d-rendering-zoom-call-avatar_23-2149556783.jpg?w=740&t=st=1675977075~exp=1675977675~hmac=c9146e8131dd1f51cb7ea7290c9589348eadb77dce82b04da98f67090d1c9934', bio: 'He is the organizer of the Annual Credit Risk Trends conference in New York, which brings together professionals from across the United States to discuss credit risk analysis, using technology to manage risk, and how banks can better position themselves to deal with emerging credit risk issues.')
+third_user = User.create(name: 'Lilly', photo: 'https://img.freepik.com/free-photo/3d-rendering-zoom-call-avatar_23-2149556780.jpg?w=740&t=st=1675976926~exp=1675977526~hmac=94dcb44bac83e594df6c9324c2d75e3f34a2b786843734624bfc19a3c5ec8b7d', bio: 'At work, Smith developed an internal stress management guide to help employees manage stress and work pressure effectively. During the weekend, he likes to go hunting with his dog Bingo or preparing grilled delicacies in his backyard.')
+fourth_user = User.create(name: 'Ariel', photo: 'https://img.freepik.com/free-photo/3d-rendering-zoom-call-avatar_23-2149556785.jpg?w=740&t=st=1675976814~exp=1675977414~hmac=50d182a4fa4f210bc23ebf26046a69abd1ea8e770ec61fdb49b283c9d795dee2', bio: 'When writing a professional bio, it is not mandatory to include personal details, such as hobbies, personal history, favorite TV shows, and unique interests. However, including personal details can help paint you as a well-rounded person and will more likely allow your audience to establish a more personal connection with you.')
 
 # Posts
 first_post = Post.create(author: first_user, title: 'What is Lorem Ipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum')
@@ -106,22 +106,24 @@ sixty_fourth_comment = Comment.create(post: eleventh_post, author: fourth_user, 
 
 # Likes
 first_like = Like.create(post: first_post, author: first_user)
-# second_like = Like.create(post: first_post, author: second_user)
-# third_like = Like.create(post: first_post, author: third_user)
+second_like = Like.create(post: fifth_post, author: second_user)
+third_like = Like.create(post: first_post, author: third_user)
 fourth_like = Like.create(post: first_post, author: fourth_user)
 
-# fifth_like = Like.create(post: second_post, author: first_user)
+fifth_like = Like.create(post: second_post, author: first_user)
 sixth_like = Like.create(post: second_post, author: second_user)
-seventh_like = Like.create(post: second_post, author: third_user)
+seventh_like = Like.create(post: seventh_post, author: third_user)
 eighth_like = Like.create(post: second_post, author: fourth_user)
 
+
 ninth_like = Like.create(post: third_post, author: first_user)
-tenth_like = Like.create(post: third_post, author: second_user)
-eleventh_like = Like.create(post: third_post, author: third_user)
+tenth_like = Like.create(post: fourth_post, author: second_user)
+eleventh_like = Like.create(post: eighth_post, author: third_user)
 twelfth_like = Like.create(post: third_post, author: fourth_user)
 
 thirteenth_like = Like.create(post: fourth_post, author: first_user)
 fourteenth_like = Like.create(post: fourth_post, author: second_user)
 fifteenth_like = Like.create(post: fourth_post, author: third_user)
-# sixteenth_like = Like.create(post: fourth_post, author: fourth_user)
+sixteenth_like = Like.create(post: eleventh_post, author: fourth_user)
+seventeenth_like = Like.create(post: ninht_post, author: first_user)
 
