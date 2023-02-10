@@ -8,17 +8,14 @@ class Post < ApplicationRecord
 
   # Validations
   validates :title, presence: true, length: { maximum: 250 }, format: { with: /\A[a-zA-Z0-9 ]+\z/ }
-
   validates :comments_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0, allow_nil: true }
-
   validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0, allow_nil: true }
 
-  def update_posts_counter
-    counter = Post.count('author_id')
-    User.update(posts_counter: counter)
+  def recents_comments
+    comments.order('created_at Desc').limit(5)
   end
 
-  def recents_comments
-    Comment.order('created_at Desc').limit(5)
+  def update_posts_counter
+    author.update(posts_counter: author.posts.count)
   end
 end
