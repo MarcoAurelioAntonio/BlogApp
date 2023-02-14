@@ -12,13 +12,14 @@ h2 {
 
 label {
   font-weight: bold;
-  margin-right: 10px;
 }
 
 input[type="text"],
 textarea {
   padding: 10px;
   margin-bottom: 20px;
+  margin-top: 10px;
+  background-color: #f3f3f3;
   width: 100%;
   box-sizing: border-box;
   border: 1px solid #ccc;

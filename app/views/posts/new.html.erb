@@ -2,17 +2,15 @@
 	<h2>Create your New Post!!</h2>
 
 	<%= form_with model: @post, url: new_user_post_path do |form| %>
-  	<%= form.label :title %>
+  	<%= form.label :title, "Title of your Post:" %>
   	<br>
-  	<%= form.text_field :title %>
+  	<%= form.text_field :title, placeholder: "Title of your post" %>
 		<br>
-		<br> 
-  	<%= form.label :text %>
+  	<%= form.label :text, "Text of your Post:" %>
 		<br>
-  	<%= form.text_area :text, size: "40x10" %>
+  	<%= form.text_area :text, size: "40x10", placeholder: "What do you want to post?" %>
 		<br>
-		<br>
-  	<%= form.submit "Create" %>
+  	<%= form.submit "Send your Post now!! " %>
 	<% end %>
 </section>
 
