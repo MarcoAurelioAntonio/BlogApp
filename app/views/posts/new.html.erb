@@ -1,0 +1,28 @@
+<section class="form-section">
+	<h2>Create your New Post!!</h2>
+
+	<%= form_with model: @post, url: new_user_post_path do |form| %>
+  	<%= form.label :title %>
+  	<br>
+  	<%= form.text_field :title %>
+		<br>
+		<br> 
+  	<%= form.label :text %>
+		<br>
+  	<%= form.text_area :text, size: "40x10" %>
+		<br>
+		<br>
+  	<%= form.submit "Create" %>
+	<% end %>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var textarea = document.querySelector("textarea");
+
+    textarea.addEventListener("input", function() {
+      this.style.height = "";
+      this.style.height = this.scrollHeight + "px";
+    });
+  });
+</script>
