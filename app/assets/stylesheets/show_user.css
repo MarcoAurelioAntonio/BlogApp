@@ -87,6 +87,7 @@ h3 {
 }
 
 .post-text {
+  word-break: break-word; /* Ajusta al contenedor palabras largas sin cortes */
   margin-left: 30px;
   margin-right: 30px;
   font-size: 15px;

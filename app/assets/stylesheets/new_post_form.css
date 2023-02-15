@@ -10,6 +10,10 @@ h2 {
   margin-bottom: 40px;
 }
 
+.post-emoji {
+  font-size: 40px;
+}
+
 label {
   font-weight: bold;
 }

@@ -9,6 +9,12 @@
     </div>
   </li>
 
+	<%= link_to new_user_post_path do %>
+    <button type="button" class="">
+      New Post
+    </button>
+	<% end %>
+
 	<% @posts.each do | post | %>
   	<%= link_to user_post_path(:id => post.id), class: 'link-post-post' do %>
 
