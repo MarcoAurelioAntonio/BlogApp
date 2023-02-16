@@ -1,0 +1,9 @@
+<div>
+  <%= form_with model: @comment, url: user_post_comments do | form | %>
+		<%= form.label "Your comment here: "%>
+		<br>
+		<%= form.text_area, placeholder: "Please, be nice... " %>
+		<br>
+		<%= form.submit "Send your comment now!! " %>
+  <% end %>
+</div>

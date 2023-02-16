@@ -9,8 +9,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   border: 1px solid #d3d3d3;
+}
+
+.post-comment-form {
+  width: 60%;
+  margin-bottom: 10px;
 }
 
 .post-show-div:hover {

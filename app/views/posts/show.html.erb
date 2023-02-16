@@ -2,7 +2,7 @@
   <div class="post-show-div" >
     <h3 class="post-title"><%= @post.title %></h3>
     <p class="post-text"><%= @post.text %></p>
-    <aside class="comment-like">
+    <div class="comment-like">
       <span class="comments">Comments: <%= @post.comments_counter %></span>
       <span class="likes">
         <%= @post.likes_counter %>
@@ -12,7 +12,19 @@
         <%= " ♥  "%>
       </button>
 
-    <aside>
+    </div>
+    <div class="post-comment-form">
+
+      <%= form_with model: Comment, url: user_post_comments_path(params[:user_id], params[:post_id]), method: :post do |form| %>
+        <%= form.hidden_field :post_id, value: post.id %>
+        <%= form.label :text, "Your comment here:" %>
+        <br>
+        <%= form.text_area :text, size: "60x2.5", placeholder: "Please, be nice..." %>
+        <br>
+        <%= form.submit "Send your comment now !! " %>
+      <% end %>
+    </div>
+
   </div>
 
   <div class="post-comment">
